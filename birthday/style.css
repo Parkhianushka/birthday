@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+body {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-image: url("image/newpheart2.jpg");
+  background-position: center center;
+  position: relative;
+}
+
+/* Heart Button CENTERED and BEHIND */
+.letter-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 0; /* behind everything */
+}
+
+.letter-button img.heart-icon {
+  width: 100px;
+  height: auto;
+  opacity: 0.7;
+  transition: transform 0.3s ease;
+}
+
+.letter-button img.heart-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Paper Cards */
+.paper {
+  background-image: url("image/newphwart.jpg");
+  background-size: cover;
+  background-position: center center;
+  width: 350px;
+  height: 450px;
+  padding: 30px;
+  transform: rotateZ(-5deg);
+  box-shadow: 1px 15px 20px 0px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 20px;
+  z-index: 1; /* above heart */
+}
+
+.paper.image {
+  padding: 20px;
+}
+
+.paper.image p {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.paper.red p,
+.paper:not(.image):not(.heart) p {
+  font-size: 28px;
+}
+
+img {
+  max-height: 280px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  user-select: none;
+}
+
+p, .p1, .p2 {
+  font-family: 'Dancing Script', cursive;
+  color: #030d22;
+  opacity: 0.95;
+  user-select: none;
+  line-height: 1.4;
+  filter: drop-shadow(2px 1.5px 1px rgba(0, 0, 50, 0.7));
+}
+.sparkle {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: sparkle-animation 2s infinite ease-in-out;
+  pointer-events: none;
+}
+
+@keyframes sparkle-animation {
+  0% {
+    transform: scale(1) translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5) translateY(-20px) rotate(180deg);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1) translateY(0) rotate(360deg);
+    opacity: 1;
+  }
+}

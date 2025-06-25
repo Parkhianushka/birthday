@@ -1,0 +1,136 @@
+/* Body Styles */
+body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-image: url("image/divyaMstand.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Nunito', sans-serif;
+}
+
+/* Letter Container */
+.letter-container {
+  background: rgba(255, 228, 236, 0.6); /* Soft pink with 60% opacity */
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #4b4b4b;
+
+  /* Add the heart-shaped cursor */
+  cursor: url('https://cdn-icons-png.flaticon.com/512/833/833472.png') 24 24, auto;
+  animation: fadeIn 2s ease-out;
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Text Shadow for h1 */
+h1 {
+  text-shadow: 0 0 10px #ff6ec7, 0 0 20px #ff6ec7, 0 0 30px #ff6ec7, 0 0 40px #ff6ec7;
+}
+body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-image: url("image/divyaMstand.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Nunito', sans-serif;
+}
+
+.letter-container {
+  background: rgba(255, 228, 236, 0.6);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #4b4b4b;
+  cursor: url('https://cdn-icons-png.flaticon.com/512/833/833472.png') 24 24, auto;
+  animation: fadeIn 2s ease-out;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+h1 {
+  text-shadow: 0 0 10px #ff6ec7, 0 0 20px #ff6ec7, 0 0 30px #ff6ec7, 0 0 40px #ff6ec7;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+.ending {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .letter-container {
+    padding: 20px;
+    font-size: 12px;
+  }
+
+  h1 {
+    font-size: 18px;
+  }
+}
+#sparkle-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none; /* This ensures the canvas doesn't block mouse interactions */
+  z-index: 9999; /* Keeps the canvas on top of everything else */
+}
+.sparkle {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: sparkle-animation 2s infinite ease-in-out;
+  pointer-events: none;
+  z-index: 2; /* sparkle above heart */
+}
+
+@keyframes sparkle-animation {
+  0% {
+    transform: scale(1) translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5) translateY(-20px) rotate(180deg);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1) translateY(0) rotate(360deg);
+    opacity: 1;
+  }
+}
